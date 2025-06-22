@@ -18,11 +18,11 @@ export const POST: RequestHandler = async ({ request, platform }) => {
     });
   }
 
-  if (!(await urlAllowed(url))) {
-    return new Response(JSON.stringify({ error: "URL is blocked." }), {
-      status: 403,
-    });
-  }
+  // if (!(await urlAllowed(url))) {
+  //   return new Response(JSON.stringify({ error: "URL is blocked." }), {
+  //     status: 403,
+  //   });
+  // }
 
   // Check if the URL is already shortened using the reverse lookup k/v pair that has the URL as the key
   const existingCode = await platform?.env.URL_SHORTENER.get(url);
