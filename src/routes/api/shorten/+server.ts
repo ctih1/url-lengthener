@@ -31,7 +31,7 @@ export const POST: RequestHandler = async ({ request, platform }) => {
     return new Response(JSON.stringify({ short: `/l/${existingCode}` }));
   }
 
-  const code = generateRandomCode(8);
+  const code = generateRandomCode(6);
   await platform?.env.URL_SHORTENER.put(code, url);
   await platform?.env.URL_SHORTENER.put(url, code); // Add a 2nd K/V pair for reverse lookup
 
