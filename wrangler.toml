@@ -1,6 +1,5 @@
 name = "url-shortener"
 compatibility_date = "2025-06-21"
-pages_build_output_dir = ".svelte-kit/cloudflare"
 
 main = ".svelte-kit/cloudflare/worker.mjs"
 
