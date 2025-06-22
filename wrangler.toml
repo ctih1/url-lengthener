@@ -1,0 +1,13 @@
+name = "url-shortener"
+pages_build_output_dir = ".svelte-kit/cloudflare"
+compatibility_date = "2025-06-21"
+
+# production environment 
+[[env.production.kv_namespaces]]
+id = "c63f222733454633b53b465f96a0bbd9"
+binding = "URL_SHORTENER"
+
+# non-production environment 
+[[env.preview.kv_namespaces]]
+id = "test"
+binding = "URL_SHORTENER"
