@@ -8,12 +8,12 @@ binding = "ASSETS"
 run_worker_first = true
 
 [[env.production.kv_namespaces]]
-binding = "KV"
-id = "e13cc64435034a51a9c99d83102c967d"
+binding = "LINKS"
+id = "af1e270efc224e22b091a70c911b7c2b"
 
 [[env.preview.kv_namespaces]]
-binding = "KV"
-id = "test"
+binding = "LINKS"
+id = "af1e270efc224e22b091a70c911b7c2b"
 
 [observability.logs]
 enabled = true
