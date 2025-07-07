@@ -12,7 +12,7 @@ binding = "KV"
 id = "e13cc64435034a51a9c99d83102c967d"
 
 [[env.preview.kv_namespaces]]
-binding = "URL_SHORTENER"
+binding = "KV"
 id = "test"
 
 [observability.logs]
