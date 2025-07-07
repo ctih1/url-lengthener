@@ -28,12 +28,12 @@ export const POST: RequestHandler = async ({ request, platform }) => {
   const existingCode = await platform?.env.URL_SHORTENER.get(url);
 
   if (existingCode) {
-    return new Response(JSON.stringify({ short: `/l/${existingCode}` }));
+    return new Response(JSON.stringify({ short: `/link/${existingCode}` }));
   }
 
-  const code = generateRandomCode(6);
+  const code = generateRandomCode(12);
   await platform?.env.URL_SHORTENER.put(code, url);
   await platform?.env.URL_SHORTENER.put(url, code); // Add a 2nd K/V pair for reverse lookup
 
-  return new Response(JSON.stringify({ short: `/l/${code}` }));
+  return new Response(JSON.stringify({ short: `/link/${code}` }));
 };
