@@ -1,4 +1,4 @@
-name = "url-lengthener"
+name = 'link-lengthener'
 main = ".svelte-kit/cloudflare/_worker.js"
 compatibility_date = "2025-06-21"
 
@@ -8,7 +8,7 @@ binding = "ASSETS"
 run_worker_first = true
 
 [[env.production.kv_namespaces]]
-binding = "URL_LENGTHENER"
+binding = "KV"
 id = "e13cc64435034a51a9c99d83102c967d"
 
 [[env.preview.kv_namespaces]]

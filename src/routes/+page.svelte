@@ -39,7 +39,7 @@
   }
 </script>
 
-<h1>URL Shortener</h1>
+<h1>URL Lengthener</h1>
 <input bind:value={url} placeholder="Paste your URL..." />
 <button onclick={shorten}>Shorten</button>
 
