@@ -3,7 +3,7 @@ import { redirect } from "@sveltejs/kit";
 
 export const load: PageServerLoad = async ({ params, platform }) => {
   const code: string = params.code;
-  const url: URL = await platform?.env.LINKS.get(code);
+  const url: URL = await platform?.env.KV.get(code);
 
   if (url) {
     throw redirect(302, url);

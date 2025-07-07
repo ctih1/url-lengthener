@@ -8,7 +8,7 @@ declare global {
     // interface PageState {}
     interface Platform {
       env: {
-        LINKS: KVNamespace;
+        KV: KVNamespace;
       };
     }
   }
