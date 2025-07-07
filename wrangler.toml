@@ -14,3 +14,6 @@ id = "e13cc64435034a51a9c99d83102c967d"
 [[env.preview.kv_namespaces]]
 binding = "URL_SHORTENER"
 id = "test"
+
+[observability.logs]
+enabled = true

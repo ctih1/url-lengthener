@@ -25,15 +25,15 @@ export const POST: RequestHandler = async ({ request, platform }) => {
   // }
 
   // Check if the URL is already shortened using the reverse lookup k/v pair that has the URL as the key
-  const existingCode = await platform?.env.URL_SHORTENER.get(url);
+  const existingCode = await platform?.env.KV.get(url);
 
   if (existingCode) {
     return new Response(JSON.stringify({ short: `/link/${existingCode}` }));
   }
 
   const code = generateRandomCode(12);
-  await platform?.env.URL_SHORTENER.put(code, url);
-  await platform?.env.URL_SHORTENER.put(url, code); // Add a 2nd K/V pair for reverse lookup
+  await platform?.env.KV.put(code, url);
+  await platform?.env.KV.put(url, code); // Add a 2nd K/V pair for reverse lookup
 
   return new Response(JSON.stringify({ short: `/link/${code}` }));
 };
